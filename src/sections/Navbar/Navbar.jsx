@@ -14,4 +14,4 @@ export default function Navbar() {
   );
 }
 
-const listItem = ['홈', '자기소개', '스킬', '교육', '프로젝트'];
+const listItem = ['자기소개', '스킬', '교육', '프로젝트'];
