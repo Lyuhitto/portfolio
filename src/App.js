@@ -1,4 +1,4 @@
-import Header from './sections/Header/Header';
+import About from './sections/About/About';
 import Navbar from './sections/Navbar/Navbar';
 import SkillAndStack from './sections/SkillAndStack/SkillAndStack';
 import Education from './sections/Education/Education';
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Header />
+      <About />
       <SkillAndStack />
       <Education />
       <ProjectList />
