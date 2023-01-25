@@ -1,4 +1,5 @@
 import React from 'react';
+import SkillContainer from './../../components/SkillContainer/SkillContainer';
 
 export default function SkillAndStack() {
   return (
@@ -13,11 +14,7 @@ export default function SkillAndStack() {
           <ul>
             {stack.item.map((i, k) => (
               <li key={k}>
-                <div>
-                  <img src={i.img} alt='' />
-                  <span>{i.name}</span>
-                  {i.desc && <button>설명</button>}
-                </div>
+                <SkillContainer img={i.img} name={i.name} desc={i.desc} />
               </li>
             ))}
           </ul>
@@ -54,7 +51,7 @@ const stackList = [
       { name: '네트워크 관리사 2급' },
       { name: '토익 R/C 805점' },
       { name: 'JLPT 일본어 능력 시험 1급' },
-      { name: 'ITパスポート(일본)', desc:'ITパスポート, IT 패스포트란, ' },
+      { name: 'ITパスポート(일본)', desc: 'ITパスポート, IT 패스포트란, ' },
     ],
   },
 ];
