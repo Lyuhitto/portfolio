@@ -1,15 +1,48 @@
-import React from 'react'
+import React from 'react';
+import SkillContainer from './../SkillContainer/SkillContainer';
 
-export default function ProjectContainer() {
+export default function ProjectContainer({
+  img,
+  tag,
+  title,
+  date,
+  skills,
+  features,
+  links,
+}) {
   return (
     <div>
-      이미지
-      개인/팀
-      프로젝트제목
-      참여기간
-      사용한 기술스택
-      특징
-      링크
+      <div>
+        <img src={img} alt='' />
+      </div>
+      <span>{tag}</span>
+      <h2>{title}</h2>
+      <span>{date}</span>
+      <ul>
+        {skills.map((skill, key) => (
+          <li key={key}>
+            <SkillContainer img={skill.img} name={skill.name} />
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {features.map((feature, key) => (
+          <li key={key}>
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {links.map((link, key) => (
+          <li key={key}>
+            <a href={link.url} target='_blank' rel='noopener noreferrer'>
+              <div>
+                <img src={link.img} alt={link.alt} />
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
